@@ -1,0 +1,19 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.entryList {
+  @apply flex flex-col items-center;
+}
+
+.entry {
+  @apply flex justify-between items-center border-b py-2 w-[500px];
+}
+
+.edit-btn {
+  @apply bg-yellow-500 text-white p-1 mr-2 w-[75px] rounded-sm transition-all duration-75 ease-in-out hover:scale-105;
+}
+
+.delete-btn {
+  @apply bg-red-500 text-white p-1 w-[75px] rounded-sm transition-all duration-75 ease-in-out hover:scale-105;
+}

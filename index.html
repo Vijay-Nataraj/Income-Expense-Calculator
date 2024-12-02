@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Income Expense Calculator</title>
+    <link rel="stylesheet" href="./dist/styles.css" />
+  </head>
+  <body class="bg-gray-100">
+    <div class="container mx-auto p-5 text-center">
+      <h1 class="text-2xl font-bold mb-10">Income Expense Calculator</h1>
+
+      <div class="mb-10">
+        <input
+          type="text"
+          id="description"
+          class="border p-2 mr-2"
+          placeholder="Description"
+          required
+        />
+        <input
+          type="number"
+          id="amount"
+          class="border p-2 mr-2"
+          placeholder="Amount"
+          required
+        />
+
+        <select id="type" class="border p-2 mr-2">
+          <option value="income">Income</option>
+          <option value="expense">Expense</option>
+        </select>
+
+        <button
+          id="addEntry"
+          class="bg-blue-500 text-white w-28 p-2 rounded-md transition-all duration-75 ease-in-out hover:scale-105 hover:font-semibold"
+        >
+          Add Entry
+        </button>
+        <button
+          id="resetFields"
+          class="bg-red-500 text-white w-28 p-2 ml-2 rounded-md transition-all duration-75 ease-in-out hover:scale-105 hover:font-semibold"
+        >
+          Reset
+        </button>
+      </div>
+
+      <div class="mb-10">
+        <div class="flex justify-center items-center">
+          <label class="mr-2">Filter:</label>
+          <label>
+            <input type="radio" name="filter" value="all" checked /> All</label
+          >
+          <label class="ml-2">
+            <input type="radio" name="filter" value="income" /> Income</label
+          >
+          <label class="ml-2">
+            <input type="radio" name="filter" value="expense" /> Expense</label
+          >
+        </div>
+      </div>
+
+      <div id="entryList" class="entryList mb-10"></div>
+
+      <div class="font-semibold">
+        <p class="mb-2">Total Income: <span id="totalIncome">0</span></p>
+        <p class="mb-2">Total Expenses: <span id="totalExpenses">0</span></p>
+        <p class="mb-2">Net Balance: <span id="netBalance"> 0</span></p>
+      </div>
+    </div>
+
+    <script src="./js/script.js"></script>
+  </body>
+</html>
